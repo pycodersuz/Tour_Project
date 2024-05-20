@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<!-- templates/create_book.html -->
+
+<div class="container" style="margin-bottom: 100px;">
+    <head>
+        <title>Create Book</title>
+    </head>
+    <body>
+        <h1>Create a new book</h1>
+        <form method="post" enctype="multipart/form-data" class="container">
+            {% csrf_token %}
+            {{ count.as_p }}
+            <button type="submit">Save</button>
+        </form>
+    </body>
+
+</div>
+
+
+
+{% endblock content %}

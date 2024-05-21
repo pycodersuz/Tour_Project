@@ -14,422 +14,294 @@ Description: This Template is created for Youtubers
 
 /* =================== Header Style Starts Here =================== */
 header{
-  @include shado-1();
-  background-color: #FFF;
-  position: absolute;
-  width: 100%;
-  z-index: 99;
-  .header-top{
-    background-color: #1c2d3ef7;
-
-    .col-det{
-      .ulleft{
-        li{
-          float: left;
-          padding: 12px;
-          color: #d3d7ce;
-          font-size: .85rem;
-          font-weight: 600;
-          i{
-            margin-right: 5px;
-            color: #bfbfbf;
-          }
-          span{
-            margin-left: 15px;
-          }
+    box-shadow: 0 3px 16px 0 rgba(0,0,0,.1);
+    background: rgba(255,255,255,.96);
+    position: absolute;
+    background-color: #FFF;
+    z-index: 999;
+    .logo{
+        padding-left: 40px;
+        padding-top: 8px;
+        @media screen and (max-width: 1024px) {
+            margin-top: 5px;
         }
-      }
-      .ulright{
-        float: right;
-        li{
-          float: left;
-          padding: 10px;
-          color: #d3d7ce;
-          font-size: 1rem;
-          font-weight: 600;
-          i{
-            margin-right: 5px;
-          }
-          span{
-            margin-left: 15px;
-          }
+        @media screen and (max-width: 767px) {
+            margin-top: 0px;
+            margin-bottom: 7px;
         }
-      }
+        img{
+            width: 250px;
+            max-width: 100%;
+        }
     }
-  }
-  .header-bottom{
-      
-  @media screen and (max-width: 991px){
-      padding: 0px;
-  }  
-    padding: 6px;
-      background-color: #334960;
-    img{
-     
-      @media screen and (max-width: 991px){
-        padding: 5px;
-        margin-top: 0px;
-        max-width: 230px;
-      }
+    .navs{
+        ul{
+            @media screen and (max-width: 911px) {
+                float: right;
+            }
+            @media screen and (max-width: 767px) {
+               float: none;
+            }
+            li{
+                float: left;
+                padding: 27px 23px;
+                font-size: .9rem;
+                font-weight: 600;
+                @media screen and (max-width: 1316px) {
+                    padding: 27px 15px;
+                }
+                @media screen and (max-width: 1138px) {
+                    font-size: .8rem;
+                }
+                @media screen and (max-width: 1040px) {
+                    padding: 27px 10px;
+                }
+                @media screen and (max-width: 767px) {
+                   float: none;
+                    padding: 12px;
+                }
+            }
+        }
     }
-  }
-  .nav-col{
-    .navbad{
-       @media screen and (max-width: 991px){
-              width: 100%;
-          }
-      display: block;
-        float: right;
-      li{
-        padding:15px 15px;
-          @media screen and (max-width: 1005px){
-                padding: 15px 12px;
-          }
-        font-weight: 700;
-        font-size: .9rem;
-          float: left;
-          @media screen and (max-width: 991px){
-              float: none;
-              width: 100%;
-              padding: 10px;
-              a{
-                  padding-left: 0px;
-              }
-          }
-          a{
-              color: #fff !important;
-          }
-      }
-      .nav-btn{
-         
-        float: right;
-      }
+    .socila-link{
+        ul{
+            float: right;
+            padding-right: 30px;
+            li{
+                float: left;
+                padding: 25px 20px;
+                @media screen and (max-width: 1078px) {
+                    padding: 25px 10px;
+                }
+            }
+        }
     }
-  }
     .small-menu{
         float: right;
-        color: #FFF;
+        color: $color-primary;
         font-size: 1.8rem;
         position: absolute;
-        right: 13px;
-        top: 19px;
+        right: 37px;
+        top: 24px;
     }
 }
-.navbar{
 
-  @media screen and (max-width: 767px){
-    padding: 0px;
-  }
+
+/* =================== Slider Style Starts Here =================== */
+
+.slider {
+  position: relative; 
+    padding-top: 75px;
 }
-.navbar-toggler{
+
+.slider-captions {
   position: absolute;
-  right: 0px;
-  top: -40px;
-  @media screen and (max-width: 767px){
-    top: -50px;
+  bottom: 132px;
+  text-align: center; }
+@media screen and (max-width: 1050px) {
+  .slider-captions {
+    bottom: 100px !important; }
+  width: 90%;
+  text-align: center;
+  float: none;
+  margin: auto;
+  .slider-captions .slider-title {
+    font-size: 42px; } }
+@media screen and (max-width: 810px) {
+  .slider-captions {
+    bottom: 50px !important; }
+  .slider-captions .slider-title {
+    font-size: 32px; } }
+@media screen and (max-width: 572px) {
+  .slider-captions {
+    display: none; } }
 
+.slider-title {
+  font-size: 66px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -3px; }
 
-  }
-}
-.scroll-to-fixed-fixed{
-  background-color: #FFF;
-  @include shado-1();
-}
+.slider-text {
+  margin-bottom: 20px;
+  color: #fff; }
 
-.scroll-to-fixed-fixed{
-  padding: 5px !important;
-}
+.slider-img {
+  background: -moz-linear-gradient(top, rgba(45, 32, 44, 0.3) 0%, rgba(45, 32, 44, 0.1) 100%);
+  background: -webkit-linear-gradient(top, rgba(45, 32, 44, 0.3) 0%, rgba(45, 32, 44, 0.1) 100%);
+  background: linear-gradient(to bottom, rgba(45, 32, 44, 0.3) 0%, rgba(45, 32, 44, 0.1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc1b2429', endColorstr='#cc1b2429', GradientType=0);
+  position: relative; }
 
-/* ===================================== Responsive Style CSS ==================================== */
-.slider{
-    padding-top: 123px;
-    @media screen and (max-width: 991px){
-        padding-top: 110px;
+.slider-img img {
+  position: relative;
+  z-index: -1; }
+
+.slider .owl-nav .owl-prev, .slider .owl-nav .owl-next {
+  color: #fff;
+  display: inline-block;
+  zoom: 1;
+  margin: 5px;
+  padding: 6px 12px;
+  font-size: 22px;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  background: transparent;
+  filter: Alpha(Opacity=50);
+  line-height: 1;
+  border: 2px solid #fff; }
+
+.owl-controls.clickable .owl-buttons div:hover {
+  filter: Alpha(Opacity=100);
+  opacity: 1;
+  text-decoration: none;
+  background-color: #fff; }
+
+.slider .owl-nav .owl-prev {
+  position: absolute;
+  top: 40%;
+  left: 25px; }
+
+.slider .owl-nav .owl-next {
+  position: absolute;
+  top: 40%;
+  right: 25px; }
+
+.slider .owl-dots .owl-dot {
+  position: relative;
+  text-align: center;
+  bottom: 40px;
+  max-width: 1140px;
+  margin: 0 auto; }
+
+.slider .owl-dots .owl-dot span {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0px 0px 10px 10px;
+  filter: Alpha(Opacity=50);
+  /*IE7 fix*/
+  opacity: 0.8;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  float: left; }
+
+.slider .owl-dots .owl-dot.active span {
+  background-color: #fff; }
+
+.slider .owl-dots .owl-dot.active span, .slider .owl-controls.clickable .owl-page:hover span {
+  background-color: #fff;
+  filter: Alpha(Opacity=100);
+  /*IE7 fix*/
+  opacity: 1; }
+
+.slider .col-lg-offset-2 {
+  float: none;
+  margin: auto; }
+
+/* ===================================== Search Style CSS ==================================== */
+
+.search{
+    background: #040e27;
+    padding: 42px 0;
+    @media screen and (max-width: 767px) {
+        margin-top: -20px;
     }
-    .detail-card{
-        position:absolute;
-        background-color: rgba(0,0,0,0.3);
-        margin-top: -50px;
-        height: 50px;
-        width: 100%;
-        font-size: 1rem;
-        color: #FFF;
-        padding: 10px;
-        z-index: 999;
+    .form-control{
+        margin-bottom: 0px;
+        border-radius: 0px;
+        background-color: #040e27;
+    }
+    h4{
+      font-weight: 600;
+        color: #fff;
+        padding-top: 7px;
+        
+    }
+    .ffb{
+        padding: 5px;
     }
 }
 
-/* ===================================== Why Choos US Style CSS ==================================== */
+/* ===================================== Travel Destinations Style CSS ==================================== */
 
-.why-choos-us{
+.travel-destination{
     @include big-padding();
-    background-color: #f6f7f9;
-    .why-ro{
-        .col-card{
-            display: flex;
+    .destination-row{
+        .descol{
             margin-bottom: 30px;
-            .icon{
-                padding: 10px;
-                margin: auto;
-                i{
-                    width: 60px;
-                    height: 60px;
-                    text-align: center;
-                    background-color: #47a0ff;
-                    color: #FFF;
-                    border-radius: 50px;
-                    font-size: 1.5rem;
-                    padding-top: 16px;
-                }
+        }
+        .destcol{
+            img{
+                border-radius: 5px;
+                width: 100%;
             }
-            .detail{
-                padding: 10px;
+            .layycover{
+                background-color: rgba(0,0,0,0.4);
+                position: absolute;
+                width: calc(100% - 30px);
+                height: 100%;
+                top: 0px;
+                border-radius: 5px;
+                z-index: 99;
                 h4{
+                    position: absolute;
+                    width: 100%;
+                    color: #FFF;
+                    bottom: 7px;
+                    left: 10px;
                     font-weight: 600;
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
                 }
-                p{
-                    font-size: .9rem;
+                span{
+                    font-weight: 400;
+                    font-size: .7rem;
                 }
             }
         }
     }
 }
 
-
-
-/* ===================================== Responsive Style CSS ==================================== */
+/* ===================================== Popular Pack Style CSS ==================================== */
 
 .popular-pack{
-     
+    background-color: #f7fafd;
     @include big-padding();
-    background-position: top;
-    .pack-row{
-        margin-top: 15px;
-        .pack-col{
-            background-color: #FFF;
-            @include shado-1();
-            img{
-                
-            }
-            .revire{
-                padding: 10px 15px;
-                display: flow-root;
-                .rat{
-                    li{
-                        float: left;
-                        i{
-                            color: #f1b517;
-                            font-size: .9rem;
-                        }
-                    }
-                }
-                .pric{
-                    float: right;
-                    font-weight: 700;
-                }
-            }
-            .detail{
-                padding: 10px 15px;
-                padding-top: 0px;
-               
-                h4{
-                    font-weight: 600;
-                }
-                p{
-                    font-size: .9rem;
-                }
-            }
-            .options{
-                padding: 10px 15px;
-                 padding-bottom: 0px;
-                padding-top: 0px;
-                border-top: 1px solid #cccccc82;
-                ul{
-                    li{
-                        float: left;
-                        padding: 10px 20px;
-                       
-                        border-right: 1px solid #cccccc82;
-                    }
-                }
-            }
+    .colpack{
+        @include shado-1();
+        background-color: #fff;
+        margin-bottom: 30px;
+        img{
+            
         }
-    }
-}
-
-
-.no-bgpack{
-    background-image: url(../images/most-popular-bg.jpg);
-}
-/* =================== Destination Style Starts Here =================== */
-
-
-.destinations{
-    @include big-padding();
-    background-color: #fff;
-    .dest-row{
-        margin-top: 20px;
-        .dest-col{
-            text-align: center;
-            margin-bottom: 20px;
-            .dest-img{
-               padding: 10px;
-                border: 1px solid #CCC;
-            }
-            h3{
-                font-size: 1.6rem;
-                margin-bottom: 20px;
-                margin-top: 20px;
+        .details{
+            padding: 15px;
+            h4{
                 font-weight: 600;
+                font-size: 1.1rem;
+                margin-bottom: 3px;
             }
             p{
-                font-size: .93rem;
-                margin-bottom: 20px;
+                font-size: .9rem;
+                margin-bottom: 5px;
             }
-            .btn{
-                box-shadow: none;
-                font-weight: 600;
-                border-radius: 5px;
-                border: 2px solid $color-primary;
-                padding: 5px 20px;
-            }
-            &:hover{
-                box-shadow: 0 5px 16px 0 rgba(0,0,0,.15);
-                transition: all .25s ease;
-                .dest-img{
-                    border: none;
+            .rat{
+                li{
+                    float: left;
+                    i{
+                        margin-right: 7px;
+                        font-size: .8rem;
+                        color: #fdae5c;
+                    }
                 }
-                padding-bottom: 25px;
             }
             
         }
     }
 }
-
-
-/* =================== Tour Type Style Starts Here =================== */
-
-.our-capablit{
-    .layy{
-        background-color: rgba(0,0,0,0.8);
-        @include big-padding();
-        padding: 80px;
-        padding-bottom: 30px;
-    }
-    
-    background-image: url(../images/slider/slid_2.jpg);
-    background-attachment: fixed;
-    background-size: 100%;
-    .session-title{
-        h2{
-            color: #fff;
-            font-weight: 700;
-        }
-    }
-    .cap-det{
-        text-align: center;
-        margin-bottom: 60px;
-        h6{
-            margin-top: 30px;
-            color: #FFF;
-            margin-bottom: 20px;
-            font-weight: 700;
-            font-size: 1.3rem;
-        }
-        p{
-            font-size: .85rem;
-            color: #FFF;
-        }
-        .icon{
-            border: 6px solid #FFF;
-            margin: auto;
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            padding-top: 25px;
-            i{
-                color: #fff;
-                font-size: 2.8rem;
-            }
-        }
-    }
-}
-
-.progress {
-  width: 100px;
-  height: 100px;
-  background: none;
-  position: relative;
-}
-
-.progress::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 6px solid #eee;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.progress>span {
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-}
-
-.progress .progress-left {
-  left: 0;
-}
-
-.progress .progress-bar {
-  width: 100%;
-  height: 100%;
-  background: none;
-  border-width: 6px;
-  border-style: solid;
-  position: absolute;
-  top: 0;
-}
-
-.progress .progress-left .progress-bar {
-  left: 100%;
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 80px;
-  border-left: 0;
-  -webkit-transform-origin: center left;
-  transform-origin: center left;
-}
-
-.progress .progress-right {
-  right: 0;
-}
-
-.progress .progress-right .progress-bar {
-  left: -100%;
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
-  border-right: 0;
-  -webkit-transform-origin: center right;
-  transform-origin: center right;
-}
-
-.progress .progress-value {
-  position: absolute;
-  top: 0;
-  left: 0;
-    .h2{
-        font-size: 1.2rem;
-        margin-top: 13px;
-        color: #FFF;
-    }
-}
-
 
 /* =================== Review Style Starts Here =================== */
 
@@ -452,7 +324,7 @@ header{
             .review-detail{
                 h4{
                     font-weight: 600;
-                    font-size: 1.2rem;
+                    font-size: 1.1rem;
                 }
                 h6{
                     margin-top: 10px;
@@ -476,37 +348,25 @@ header{
     }
 }
 
-
-/* =================== Blog Style Starts Here =================== */
+/* =================== Review Style Starts Here =================== */
 
 .blog{
-    background-color:#f7f7f7;
     @include big-padding();
     .blog-row{
-        .blog-col{
-            background-color: #fff;
-            padding: 15px;
-            @include shado-4();
+        margin-top: 20px;
+        .blogcol{
             margin-bottom: 30px;
             img{
-                margin-bottom: 20px;
-                width: 100%;
+                margin-bottom: 10px;
             }
             span{
-               color: #a09f9f;    
-               font-size: .83rem;
+                font-size: .8rem;
             }
             h4{
-                margin-top: 15px;
+                margin-top: 10px;
                 font-weight: 600;
-                font-size: 1.2rem;
-                margin-bottom: 15px;
+                font-size: 1.1rem;
                 line-height: 26px;
-            }
-            p{
-                font-weight: 500;
-                font-size: .93rem;
-                line-height: 25px;
             }
         }
     }
@@ -516,7 +376,7 @@ header{
 
 .footer {
   padding: 50px;
-  background-color: #334960;
+  background-color: #263544;
   color: #FFF; }
   @media screen and (max-width: 940px) {
     .footer {
@@ -547,6 +407,9 @@ header{
     padding-left: 20px; }
 address{
     font-size: .95rem;
+    a{
+        color: #fff;
+    }
 }
 .copy {
   padding: 20px;
@@ -562,6 +425,7 @@ address{
     @media screen and (max-width: 777px) {
       .copy span {
         display: none; } }
+
 
 /* ===================================== About CSS ================================== */
 
@@ -596,95 +460,34 @@ address{
   }
 }
 
-/* =================== Our Team Starts Here =================== */
 
-.our-team{
-    @media screen and (max-width: 450px) {
-        padding: 30px 10px;
-    }
-    padding:50px;
-        .content-title h2{
-            margin-bottom: 50px;
-        }
-    .team-member{
-         @media screen and (max-width: 767px) {
-             margin-bottom: 15px;
-        }
-        padding: 10px;
-        background-color: #FFF;
-        img{margin-bottom: 5px;}
-        @include card-1();
-        p{margin-top: 5px; 
-            font-size: .85rem;
-        }
-        b{padding: 5px;}
-        text-align: center;
-        ul li{
-            float: left;padding: 5px;
-            width: 20%; text-align: center;
-            border: 1px solid #efefefa6;
-        }
-        ul{
-            margin: 0px;
-            margin-top: 10px;
-        }
-    }
+/* ===================================== Our Team Style  ================================== */
 
+.our-team {
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .our-team {
+      padding: 50px 10px; } }
+.our-team .team-row {
+    margin-top: 20px; }
+.our-team .team-row .single-usr {
+      box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+      margin-bottom: 20px; 
 }
-
-/* ===================================== Gallery Style  ================================== */
-.gallery-filter {
-  width: 100%;
-  text-align: center; }
-  .gallery-filter .btn {
-    background-color: #FFF; }
-
-.gallery {
-    @include big-padding();
-  padding: 30px;
-  background-color: #FFF; }
-
-.gallery-title {
-  font-size: 36px;
-  color: #00ab9f;
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 70px; }
-
-.gallery-title:after {
-  content: "";
-  position: absolute;
-  width: 7.5%;
-  left: 46.5%;
-  height: 45px;
-  border-bottom: 1px solid $color-primary; }
-
-.filter-button {
-  font-size: 18px;
-  border: 1px solid $color-primary;
-  border-radius: 5px;
-  text-align: center;
-  color: $color-primary;
-  margin-bottom: 30px; }
-
-.filter-button:hover {
-  font-size: 18px;
-  border: 1px solid $color-primary;
-  border-radius: 5px;
-  text-align: center;
-  color: #ffffff;
-  background-color: $color-primary; }
-
-.btn-default:active .filter-button:active {
-  background-color: $color-primary;
-  color: white; }
-
-.port-image {
-  width: 100%; }
-
-.gallery_product {
-  margin-bottom: 30px; }
-
+.our-team .team-row .single-usr img {
+        width: 100%; 
+}
+.our-team .team-row .single-usr .det-o {
+        padding: 20px;
+        background-color: #0363b0; 
+}
+.our-team .team-row .single-usr .det-o h4 {
+          color: #FFF;
+          margin-bottom: 0px; 
+}
+.our-team .team-row .single-usr .det-o i {
+          color: #FFF; 
+}
 
 
 

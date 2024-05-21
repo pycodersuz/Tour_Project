@@ -1,0 +1,14 @@
+About the project:
+Project - creating a web page with information about the Tour Agency.
+
+Terms Page 1:
+General and detailed information about the Tour Agency (with pictures).
+Other information than navbars and certain statics should come from the Database.
+
+Terms Page 2:
+Services are divided into Europe travel, Asia travel and Hajj and Umrah travel.
+It should be possible to get full information about the trip to each city by clicking the "Details" button.
+Trips should be sorted by name and shown to the user.
+
+Terms Page 3:
+ 1. Divide the trip into 3 different airlines (UZB Airlines, Emirates Airlines, Asiana Airways)

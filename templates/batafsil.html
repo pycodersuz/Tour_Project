@@ -16,7 +16,19 @@
                             <span>${{product.price}}</span>
                         </div>
                         <p class="lead">{{product.description}}</p>
+                        <h1>
+                            
+                        </h1>
+                        <div>
+                            <a href="{% url 'product_update' product.id %}" class="btn btn-outline-primary" style="margin-bottom: 10px;">Edit</a>
+                            <form method="post" action="{% url 'product_delete' product.id %}" style="display:inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-outline-danger btn-sm" style="margin-bottom: 10px;">Delete</button>
+                            </form>
+                            
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </section>

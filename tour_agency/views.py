@@ -1,12 +1,25 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Tour, Category
+from .models import Tour, Category, AirCategory
 from .forms import TourForm
 
 def index(request):
-    return render(request, 'index.html')
+    category = Category.objects.all()
+    aircategory = AirCategory.objects.all()
+    context = {
+        'category': category,
+        'aircategory': aircategory
+    }
+    return render(request, 'index.html', context)
 
 def about(request):
-    return render(request, 'about.html')
+    category = Category.objects.all()
+    aircategory = AirCategory.objects.all()
+    context = {
+        'category': category,
+        'aircategory': aircategory
+    }
+    return render(request, 'about.html', context)   
+
 
 def gallery(request):
     return render(request, 'gallery.html')
@@ -14,13 +27,35 @@ def gallery(request):
 def batafsil(request, id):
     product = get_object_or_404(Tour, id=id)
     categories = Category.objects.all()
-    return render(request, 'batafsil.html', {"product":product, "cats": categories})
+    tour = Tour.objects.all()
+    context = {
+        'product': product,
+        'categories': categories,
+        'tour': tour
+    }
+    return render(request, 'batafsil.html', context)
 
 def home(request):
     products = Tour.objects.all()
     categories = Category.objects.all()
+    aircategory = AirCategory.objects.all()
 
-    return render(request, 'tour.html', {"products": products, "cats": categories})
+    selected_destination = request.GET.get('travel_destination')
+    selected_type = request.GET.get('travel_type')
+
+    if selected_destination:
+        products = products.filter(category__aircategory__id=selected_destination)
+
+    if selected_type:
+        products = products.filter(category__id=selected_type)
+
+    context = {
+        'category': categories,
+        'aircategory': aircategory,
+        'products': products,
+    }
+
+    return render(request, 'tour.html', context)
 
 def category(request, id):
     cat = get_object_or_404(Category, id=id)

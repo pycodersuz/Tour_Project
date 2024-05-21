@@ -4,70 +4,47 @@
 
 {% block content %}
 
-
-
-
-
-
-
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Category</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+<!--  ************************* Page Title Starts Here ************************** -->
+<div class="page-nav no-margin row">
+    <div class="container">
+        <div class="row">
+            <h2>Our Packages</h2>
+            <ul>
+                <li> <a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><i class="fas fa-angle-double-right"></i> Packages</li>
+            </ul>
+        </div>
+    </div>
+</div>
+     
+ 
+       
+ <!-- ******************** Popular Packages Starts Here ******************* -->
+    
+    <section class="container-fluid popular-pack">
+        <div class="container">
+            {% for product in products %}
+            <div class="row pack-row">
+                <div class="col-md-4">
+                    <div class="colpack">
+                        <img src="{{ product.image.url }}" alt="">
+                        <div class="details row no-margin">
+                            <h4>{{ product.name }}</h4>
+                            <p>${{ product.price }}</p>
+                            <ul class="rat">
+                                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'batafsil' product.id %}">Batafsil</a></div>
+                                </div>
                             </ul>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-
-        <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    {% for product in products %}
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="{{ product.image.url }}" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">{{ product.name }}</h5>
-                                    <!-- Product price-->
-                                    ${{ product.price }}
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{% url 'batafsil' product.id %}">Batafsil</a></div>
-                            </div>
-                                <div>
-                                    <a href="{% url 'product_update' product.id %}" class="btn btn-outline-primary" style="margin-bottom: 10px;">Edit</a>
-                                    <form method="post" action="{% url 'product_delete' product.id %}" style="display:inline;">
-                                        {% csrf_token %}
-                                        <button type="submit" class="btn btn-outline-danger btn-sm" style="margin-bottom: 10px;">Delete</button>
-                                    </form>
-                                    
-                                </div>
+                            
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
+
+                
             </div>
-        </section>
-
-        <a href="{% url 'product_create' %}" class="btn btn-primary btn-lg" style="margin-left: 20px;">Create</a>
-        <!-- Footer-->
-
+            {% endfor %}
+        </div>
+    </section>
         <!-- Bootstrap core JS-->
 {% endblock content %}
